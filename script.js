@@ -14,12 +14,13 @@ const makeChange = (c) => {
 		"p":0
 	};
 	for(let i in obj){
-		while(c>obj[i]){
+		while(num>=obj[i]){
 			ans[i]++;
-			c-=obj[i];
+			num-=obj[i];
 		}
 	}
-}
+	return ans;
+} 
 // Do not the change the code below
 const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
